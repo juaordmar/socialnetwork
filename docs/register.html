@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="icon" href="/images/log2.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fondo.css">
+    <script src="/js/utils/include.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/utils/session.js" type="module"></script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="/js/libs/jquery-3.4.1.min.js"> </script>
+    <script src="/js/libs/popper.min.js "> </script>
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script type="module" src="/js/register.js"></script>
+    <script src="/js/header.js" type="module"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form-reg" class="border p-3 form">
+            <h2>Register a new user:</h2>
+            <div id="errors"></div>
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="firstname-input"> First name: * </label>
+                        <input type="text" class="form-control" id="firstname-input" name="firstName" placeholder="First name">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="lastname-input"> Last name: * </label>
+                        <input type="text" class="form-control" id="lastname-input" name="lastName" placeholder="Last name">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="email-input"> Email: * </label>
+                        <input type="email" class="form-control" id="emailname-input" name="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="telephone-input"> Telephone: </label>
+                        <input type="tel" class="form-control" id="telephone-input" name="telephone" placeholder="Telephone (Optional)">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="username-input"> Username: * </label>
+                        <input type="text" class="form-control" id="username-input" name="username" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="password-input"> Password: * </label>
+                        <input type="password" class="form-control" id="password-input" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="password-input"> Repeat password: * </label>
+                        <input type="password" class="form-control" id="password2-input" name="repeatPassword" placeholder="Repeat your password">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <p>All fields marked with * are required</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <input type="submit" value="Register" class="btn btn-primary" />
+                </div>
+                <div class="col-md" id="link-btw">
+                    <p>Already have an account? <a href="login.html">Log in!</a></p>
+                </div>
+            </div>
+        </form>
+        <div class="logo">
+            <a href="index.html" title="Página principal">
+                <img alt="logo" src="/images/loguito.png" width="50%" height="50%" style="border-radius: 50%" />
+            </a>
+        </div>
+    </div>
+
+    <script>include('header.html', '#page-header')</script>
+
+</body>
+
+</html>

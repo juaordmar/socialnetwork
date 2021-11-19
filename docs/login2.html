@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="icon" href="/images/log2.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fondo.css">
+    <script src="/js/utils/include.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="/js/libs/jquery-3.4.1.min.js"> </script>
+    <script src="/js/libs/popper.min.js "> </script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="/js/header.js" type="module"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div id="page-header"> </div> -->
+        <form id="form-reg" action="index.html" class="border p-3 form">
+            <h2>Register a new user:</h2>
+
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="username-input"> Username: </label>
+                        <input type="text" class="form-control" id="username-input" name="username" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="password-input"> Password: </label>
+                        <input type="password" class="form-control" id="password-input" name="password" placeholder="Password">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md text-center">
+
+                    <!-- <button type="submit" class="btn btn-primary"> Register </button> -->
+
+
+                </div>
+            </div>
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </form>
+        <div class="logo">
+            <a href="index.html" title="Página principal">
+                <img alt="logo" src="/images/loguito.png" width="50%" height="50%" style="border-radius: 50%" />
+            </a>
+        </div>
+    </div>
+
+    <script>include('header.html', '#page-header')</script>
+
+</body>
+
+</html>

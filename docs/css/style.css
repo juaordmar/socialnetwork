@@ -1,0 +1,129 @@
+.photo-block {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5%;
+}    
+
+.photo-edit-block {
+    margin-block-end: 20px;
+}
+
+.photo-title {
+    font-size: 140%;
+    font-family: Arial;
+    text-decoration: solid;
+}
+
+.photo-score {
+    font-family: 130%;
+    font-family: monospace;
+}
+
+.photo-image {
+    height: auto;
+    width: 100%;
+}
+
+.gallery-container { 
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+    
+.input-group > label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+.input-group {
+    margin-bottom: 0.5em;
+}
+
+div.title-block {
+
+    text-align: center;
+
+    padding-top: 1%;
+
+    padding-bottom: 1%;
+
+    background-color: #EEEEEE;
+
+}
+
+#title {
+
+    font-size: 300%;
+
+    text-decoration: none;
+
+    color: #444444;
+
+    font-family: sans-serif;
+
+    margin-bottom: 0;
+
+}
+
+#form-reg {
+
+    margin-top: 100px;
+
+}
+
+#subtitle {
+
+    font-size: 120%;
+
+    font-style: italic;
+
+    color: #555555;
+
+    font-family: monospace;
+
+}
+
+div.navigation > a {
+
+    color: white;
+
+    font-size: 120%;
+
+    background-color: #555555;
+
+    font-family: monospace;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    min-width: 150px;
+
+}
+
+#send-btn{
+    margin-bottom: 10px;
+}
+
+#page-title{
+    margin-top: 15px;
+}
+
+#link-btw{
+    background-color: #F5C3F7;
+}
+
+#button-edit, #button-delete{
+    margin-top: 33px;
+}
+
+.caja1{
+    margin-top: 20px;
+}
+
+.caja2{
+    width: 80%;
+    background-color: rgba(208, 236, 240, 0.808);
+    padding: 10px;
+    margin-bottom: 60px;
+}

@@ -1,0 +1,22 @@
+.menu{text-align: left;}
+
+.logo{float: right;}
+
+.abs-center {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+  
+.form {
+    width: 400px;
+}
+
+div.loguito {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 170px;
+    width: 400px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    border-radius: 20px;
+    margin: 0 auto;
+}

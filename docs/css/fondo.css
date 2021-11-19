@@ -1,0 +1,16 @@
+body{
+    background: url("/images/fondo.jpg");
+    background-size: cover;
+}
+
+.form{
+    background-color: #ffffff;
+    float: left;
+    margin-top: 200px;
+}
+
+.logo{
+    float: right;
+    margin-top: 280px;
+}
+

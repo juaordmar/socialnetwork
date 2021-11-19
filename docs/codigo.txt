@@ -1,0 +1,117 @@
+"use strict"
+import { parseHTML } from "/js/utils/parseHTML.js" ;
+
+const photoRenderer ={
+    asCard : function(photo){
+        let html = `<div class= " col-md-4 " >
+        <div class= " card " >
+        <a href= "photo_detail.html " >
+        <img src= "${photo.url}" class="card-img-top" >
+        </a >
+        <div class= " card-body " >
+        <h5 class= " card-title text-center " > ${photo.title} </h5 >
+        <p class= " card-text " > ${photo.description } </p >
+        <p class= " text-right " > ${photo.userId} </p >
+        </div >
+        </div >
+        </div >`
+        let card = parseHTML(html);
+        return card;
+    }
+};
+
+export {photoRenderer};
+
+---------------
+
+"use strict"
+import { photoRenderer } from "/js/renderers/photo.js" ;
+
+function main(){
+    let content=document.querySelector("div.container");
+    let photo = {
+        title: " Samoyed " ,
+        description: " A very good boy. " ,
+        userId: 1 ,
+        url: " https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg " ,
+    };
+    let card=photoRenderer.asCard(photo);
+    content.appendChild(card);
+}
+
+document.addEventListener("DOMContentLoaded", main)
+---------
+
+"use strict"
+import { galleryRenderer } from "/js/renderers/gallery.js" ;
+
+function main(){
+    let content=document.querySelector("div.container");
+    let photos = [
+        {
+        title: " Samoyed " ,
+        description: " A very good boy. " ,
+        userId: 1 ,
+        url: "https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg" ,
+        date: " 15/08/2020 " ,
+        },
+        {
+        title: " Spanish tortilla " ,
+        description: " With onion " ,
+        userId: 2 ,
+        url: "https://i.ibb.co/tY1Jcnc/wlZCfCv.jpg",
+        date: " 01/01/2021 " ,
+        },
+        {
+        title: " Seville " ,
+        description: " The beautiful city of Seville " ,
+        userId: 3 ,
+        url: "https://urbansevilla.es/wp-content/uploads/2019/03/urban-sevilla-foto-ciudad.jpg",
+        date: " 03/02/2019 " ,
+        },
+        {
+        title: " Abstract art " ,
+        description: " Clipart " ,
+        userId: 4 ,
+        url: "https://clipartart.com/images/worst-clipart-ever-1.jpg ",
+        date: " 14/08/2019 " ,
+        },
+        ];
+    let card=galleryRenderer.asCardGallery(photos);
+    
+    content.appendChild(card);
+
+}
+
+document.addEventListener("DOMContentLoaded", main)
+
+--
+
+"use strict"
+import { parseHTML } from "/js/utils/parseHTML.js" ;
+import { photoRenderer } from "/js/renderers/photo.js" ;
+
+const galleryRenderer ={
+    asCardGallery: function (photos){
+        let galleryContainer = parseHTML ( '<div class= "photo-gallery" > </div>');
+        let row = parseHTML ( '<div class= "row"> </div >') ;
+        galleryContainer.appendChild(row) ;
+
+        let counter = 0;
+
+        for(let photo of photos){
+            let card=photoRenderer.asCard(photo);
+            row.appendChild(card);
+            counter +=1;
+
+            if( counter % 3 === 0){
+                row = parseHTML ( '<div class= "row"> </div >') ;
+                galleryContainer.appendChild(row) ;
+
+            }
+        }
+        return galleryContainer;
+    }
+};
+
+export {galleryRenderer};
